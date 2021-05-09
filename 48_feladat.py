@@ -1,8 +1,8 @@
 import numpy as np
 import random
-nulla=np.random.randint(0,1,20)
-nulla[random.randint(0,19)]=1
 kep=np.random.randint(0,2,(5,20))
+nulla=np.random.randint(0,1,kep.shape[1])
+nulla[random.randint(0,kep.shape[1]-1)]=1
 for i in range(1,kep.shape[0],2):
     husszazalek=np.array([np.random.randint(0, 2, kep.shape[1]), np.random.randint(0, 2, kep.shape[1]), np.random.randint(0, 2, kep.shape[1]), np.random.randint(0, 2, kep.shape[1]), nulla])
     np.random.shuffle(husszazalek)
