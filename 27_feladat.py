@@ -15,9 +15,8 @@ try:
     bemenetls=bemenet.split(" ")
     tav=int(bemenetls[0])
     hatar=int(bemenetls[1])
-    trafi=""
+    trafi = input("Adja meg a traffipax által bemért adatokat!")
     while trafi!="meres vege":
-        trafi=input("Adja meg a traffipax által bemért adatokat!")
         trafils=trafi.split(" ")
         rendszam=trafils[0]
         ido=int(trafils[1])
@@ -29,6 +28,7 @@ try:
 A mai napon Önt a {rendszam} rendszámú gépjárművel a traffipax {seb} km/h sebességgel mérte be.
 Ezért a következő bírság befizetésére kötelezzük: {osszeg}Ft""",file=fout)
             fout.close()
+        trafi = input("Adja meg a traffipax által bemért adatokat!")
 except ValueError:
     print("Nem megfelelően adta meg a bekért adatot!")
 #példa bemenet:
